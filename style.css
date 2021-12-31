@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Rubik:wght@400;500&display=swap');
+
+:root {
+    --purple: #713FFF;
+    --purple-dark: #3C184E;
+    --white: #FFF; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: var(--purple-dark);
+    overflow: hidden;
+
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    height: 64px;
+}
+
+header h2 {
+    font-weight: 500;
+}
+
+main {
+    height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 520px;
+}
+
+.title {
+    font-family: 'Merriweather';
+    font-size: 64px;
+}
+
+.hightlight {
+    position: relative;
+}
+
+.hightlight::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    background-image: url('./img/hightlight.png');
+    width: 239px;
+    height: 24px;
+}
+
+.description {
+    margin: 42px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 139px;
+    height: 42px;
+    transition: .4s;
+}
+
+.filled {
+    background-color: var(--purple);
+    border-radius: 40px;
+    color: var(--white);
+   
+}
+
+.filled:hover {
+    border: 1px solid var(--purple);
+    background-color: #fff;
+    color: var(--purple);
+}
+
+.not-filled {
+    width: 150px;
+}
+
+.not-filled:hover {
+    background-color: var(--purple-dark);
+    border-radius: 40px;
+    color: var(--white);
+}
+
+.fundo {
+    position: absolute;
+    width: 750px;
+    height: 450px;
+    top: 100px;
+    right: -100px;
+    background: linear-gradient(180deg, #3CB7DE 0%, #3FA3FF 100%);
+    border-radius: 500px 0px 0px 500px;
+    transform: rotate(-17.91deg);
+    overflow: hidden;
+}
+
+.fundo::before {
+    content: '';
+    background-image: url('./img/dog.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 365px;
+    height: 395px;
+    position: absolute;
+    top: 52px;
+    left: 30px;
+    transform: rotate(17.91deg);
+}
+
+.fundo::after {
+    content: '';
+    background-image: url('./img/paws.png');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    left: 40px;
+    position: absolute;
+    transform: rotate(20.91deg);
+}
+
+.racao {
+    position: absolute;
+    right: 480px;
+    bottom: 0px;
+    transition: .4s;
+}
+
+.racao:hover {
+    transform: scale(1.2);
+}
